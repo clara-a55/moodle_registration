@@ -1,9 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project name="MoodleRegistration" default="hello">
+<project name="MoodleRegistration" default="validate">
 
-    <target name="hello">
-        <echo message="Hello World"/>
+    <target name="transform-data">
+        <echo message="Converting CSV to XML..."/>
+
+        <exec executable="python3" failonerror="true">
+            <arg value="scripts/csv_to_xml.py"/>
+        </exec>
+    </target>
+
+    <target name="validate" depends="transform-data">
+        <echo message="Validating XML against XSD..."/>
+
+        <xmlvalidate failonerror="true">
+            <fileset dir="data">
+                <include name="users.xml"/>
+            </fileset>
+
+            <attribute
+                name="http://apache.org/xml/features/validation/schema"
+                value="true"/>
+
+            <property
+                name="http://java.sun.com/xml/jaxp/properties/schemaLanguage"
+                value="http://www.w3.org/2001/XMLSchema"/>
+
+            <property
+                name="http://java.sun.com/xml/jaxp/properties/schemaSource"
+                value="../xsd/users.xsd"/>
+        </xmlvalidate>
+     </target>
+
+    <target name="transform" depends="validate">
+        <echo message="Transforming XML to SQL..."/>
+
+        <mkdir dir="output"/>
+
+        <xslt
+            in="data/users.xml"
+            out="output/users.sql"
+            style="xslt/users-to-sql.xsl">
+        </xslt>
+
+        <echo message="SQL file created: output/users.sql"/>
     </target>
 
 </project>

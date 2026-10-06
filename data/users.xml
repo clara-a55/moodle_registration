@@ -6,7 +6,7 @@
         <email>ahmad.abouadla@techvitis.com</email>
         <firstname>Ahmad</firstname>
         <lastname>Abou Adla</lastname>
-        <idnumber>240123</idnumber>
+        <idnumber>40123</idnumber>
         <password>AhmadA123</password>
         <city>Beirut</city>
         <country>LB</country>
@@ -40,18 +40,18 @@
         <firstname>Firas</firstname>
         <lastname>Noun</lastname>
         <idnumber>24010</idnumber>
-        <password>firas</password>
+        <password>Firas123</password>
         <city>Beirut</city>
         <country>LB</country>
     </user>
     <user>
         <id>21</id>
-        <username>hadil.kassir</username>
+        <username>hadi.kassir</username>
         <email>hadil.kassir@techvitis.com</email>
         <firstname>Hadil</firstname>
         <lastname>Kassir</lastname>
-        <idnumber>240134</idnumber>
-        <password>hadil</password>
+        <idnumber>40134</idnumber>
+        <password>Hadil123</password>
         <city>Beirut</city>
         <country>LB</country>
     </user>
@@ -62,7 +62,7 @@
         <firstname>Hanan</firstname>
         <lastname>ElTassa</lastname>
         <idnumber>24006</idnumber>
-        <password />
+        <password>Hanan123</password>
         <city>Beirut</city>
         <country>LB</country>
     </user>
@@ -73,14 +73,14 @@
         <firstname>Jad</firstname>
         <lastname>Harfoush</lastname>
         <idnumber>24005</idnumber>
-        <password>jad1234566</password>
+        <password>Jad1234566</password>
         <city>Beirut</city>
         <country>LB</country>
     </user>
     <user>
         <id>15</id>
         <username>karl.khaled</username>
-        <email>karl.khaledtechvitis.com</email>
+        <email>karl.khaled@techvitis.com</email>
         <firstname>Karl</firstname>
         <lastname>Khaled</lastname>
         <idnumber>24007</idnumber>
@@ -102,7 +102,7 @@
     <user>
         <id>8</id>
         <username>mahmoud.chehabeddine</username>
-        <email>mahmoud.chehabeddine@techvitis.com</email>
+        <email>mahmoud.chehab@techvitis.com</email>
         <firstname>Mahmoud</firstname>
         <lastname>Chehabeddine</lastname>
         <idnumber>23001</idnumber>
@@ -127,8 +127,8 @@
         <email>admin@techvitis.com</email>
         <firstname>Nabil</firstname>
         <lastname>Boudiab</lastname>
-        <idnumber />
-        <password>admin1234</password>
+        <idnumber>20001</idnumber>
+        <password>Admin1234</password>
         <city>Beirut</city>
         <country>LB</country>
     </user>
