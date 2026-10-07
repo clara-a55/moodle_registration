@@ -30,7 +30,7 @@
                 name="http://java.sun.com/xml/jaxp/properties/schemaSource"
                 value="../xsd/users.xsd"/>
         </xmlvalidate>
-     </target>
+    </target>
 
     <target name="transform" depends="validate">
         <echo message="Transforming XML to SQL..."/>
@@ -44,6 +44,21 @@
         </xslt>
 
         <echo message="SQL file created: output/users.sql"/>
+    </target>
+
+    <target name="sql" depends="transform">
+        <echo message="Executing SQL against MariaDB..."/>
+
+        <sql
+            driver="org.mariadb.jdbc.Driver"
+            url="jdbc:mariadb://localhost:3306/moodle_assignment"
+            userid="moodle_user"
+            password="MoodlePass123"
+            classpath="/usr/share/java/mariadb-java-client-2.7.6.jar"
+            src="output/users.sql">
+        </sql>
+
+        <echo message="SQL execution completed successfully."/>
     </target>
 
 </project>
